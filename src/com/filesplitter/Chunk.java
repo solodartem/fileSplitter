@@ -20,9 +20,11 @@ public class Chunk implements Source {
 
     @Override
     public String readLine() {
+
         if (!hasNext()) {
             throw new IllegalAccessError();
         }
+
         String result = currentCount==0?HEADER:LINE+currentCount;
         currentCount++;
         return  result;
