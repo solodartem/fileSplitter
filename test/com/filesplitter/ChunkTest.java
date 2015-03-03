@@ -2,11 +2,10 @@ package com.filesplitter;
 
 import org.junit.Test;
 
-
 import java.util.LinkedList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class ChunkTest {
 
@@ -22,7 +21,7 @@ public class ChunkTest {
 
         assertEquals(stringList.size(), qty);
         assertEquals(stringList.get(0), Source.HEADER);
-        assertEquals(stringList.get(qty-1), Source.LINE+(qty-1));
+        assertEquals(stringList.get(qty - 1), Source.LINE + (qty - 1));
     }
 
     @Test(expected = IllegalAccessError.class)
@@ -32,7 +31,7 @@ public class ChunkTest {
         do {
             chunk.readLine();
         }
-        while (1==1);
+        while (1 == 1);
 
     }
 

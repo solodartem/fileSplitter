@@ -20,7 +20,7 @@ public class FileSourceTest {
         }
 
         // calculate HEADERs qty
-        int headersQty=0;
+        int headersQty = 0;
         while (stringList.contains(Source.HEADER)) {
             stringList.remove(Source.HEADER);
             headersQty++;
