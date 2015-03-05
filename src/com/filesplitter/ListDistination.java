@@ -9,13 +9,13 @@ public class ListDistination implements Destination<Integer> {
 
     private LinkedList<String> internalList = new LinkedList<String>();
 
-    private int headersQty = 0;
+    private int chunksQty = 0;
 
     @Override
     public void writeLine(String line) {
         internalList.add(line);
         if (Source.HEADER.equals(line)) {
-            headersQty++;
+            chunksQty++;
         }
 
     }
@@ -27,6 +27,6 @@ public class ListDistination implements Destination<Integer> {
 
     @Override
     public String toString() {
-        return "Size " + internalList.size() + " headersQty =" + headersQty +'}';
+        return "Size " + internalList.size() + " chunksQty =" + chunksQty +'}';
     }
 }

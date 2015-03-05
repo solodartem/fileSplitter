@@ -6,11 +6,10 @@ package com.filesplitter;
 public class Chunk implements Source {
 
     private final int maxCount;
-    private int currentCount;
+    private int currentCount = 0;
 
     public Chunk(int maxCount) {
         this.maxCount = maxCount;
-        this.currentCount = 0;
     }
 
     @Override

@@ -58,6 +58,6 @@ public class Splitter {
     public static void main(String[] args) {
         Splitter splitter = new Splitter();
         splitter.split();
-        System.out.println(splitter.queue);
+        System.out.println(splitter.getQueue());
     }
 }

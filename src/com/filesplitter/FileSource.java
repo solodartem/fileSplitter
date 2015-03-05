@@ -11,17 +11,16 @@ public class FileSource implements Source {
 
     public FileSource(int chunksQty) {
         this.chunksQty = chunksQty;
-        this.currentQty = 1;
-        this.currentChunk = new Chunk(generateRandInt());
+        setupNewChunk();
     }
 
-    private int generateRandInt() {
+    private int generateRandomInt() {
         return (int)(Math.random()*10)+1;
     }
 
     private void setupNewChunk() {
         currentQty++;
-        currentChunk = new Chunk(generateRandInt());
+        currentChunk = new Chunk(generateRandomInt());
     }
 
     @Override
